@@ -1,0 +1,7 @@
+Hello, <%= session[:name] %>
+
+<%= form_tag logout_path do %>
+  <input type="submit" value="logout">
+<% end %>
+
+<%= link_to "Show secret", secret_page_path %>
