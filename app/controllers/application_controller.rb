@@ -4,18 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
 
-  def home
-    redirect_to login_path unless session[:name]
-  end
 
-  def current_user
-    session[:name]
-  end
-
-  private
-
-  def require_login
-    redirect_to login_path unless session.include? :user_id
-  end
+   def current_user
+     session[:name]
+   end
 
 end
